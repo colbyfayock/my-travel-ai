@@ -61,6 +61,11 @@ export default async function Destination({ params }: { params: { destinationId:
               src={destination.video.publicId}
               width={destination.video.width}
               height={destination.video.height}
+              transformation={{
+                streaming_profile: 'hd',
+              }}
+              sourceTypes={['hls']}
+              pictureInPictureToggle
             />
           </div>
         </Container>
@@ -153,9 +158,15 @@ export default async function Destination({ params }: { params: { destinationId:
                   <CldVideoPlayer
                     id={`explore-${video.publicId.replace('/', '')}`}
                     className="mx-auto"
-                    width={video.width}
-                    height={video.height}
+                    width={900}
+                    height={1600}
                     src={video.publicId}
+                    transformation={{
+                      width: 900,
+                      height: 1600,
+                      crop: 'fill',
+                      gravity: 'auto'
+                    }}
                     controls
                   />
                 </li>
