@@ -17,8 +17,12 @@ export default function Home() {
                 <CldImage
                   className="bg-zinc-100"
                   src={destination.image.publicId}
-                  width={destination.image.width}
-                  height={destination.image.height}
+                  width={730}
+                  height={900}
+                  crop="pad"
+                  fillBackground
+                  // remove="person"
+                  // replace={['person', 'cat']}
                   alt={destination.image.alt}
                   sizes="(min-width: 1024px) 33.33vw, 50vw"
                 />
