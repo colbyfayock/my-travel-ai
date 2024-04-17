@@ -114,6 +114,7 @@ export default async function Destination({ params }: { params: { destinationId:
                 tags: ['traveler-photo', `destination-${destination.id}`],
                 folder: 'my-travel-ai/uploads',
               }}
+              uploadPreset="jm4libzz"
             >
               Add a Photo
             </CldUploadButton>
