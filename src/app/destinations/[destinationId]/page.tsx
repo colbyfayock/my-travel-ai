@@ -84,11 +84,14 @@ export default async function Destination({ params }: { params: { destinationId:
                 return (
                   <li key={item.publicId} className="relative m-0 p-0">
                     <CldImage
-                      className="m-0"
+                      className="m-0 rounded-full"
                       src={item.publicId}
                       width={600}
                       height={600}
+                      crop="auto"
                       alt=""
+                      removeBackground
+                      background="rgb:FEDD00"
                     />
                     <p className="absolute bottom-2 -left-1 bg-[#009739] text-white px-3 py-1 text-sm font-bold rounded">
                       { item.title }
