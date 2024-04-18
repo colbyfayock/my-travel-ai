@@ -113,6 +113,8 @@ export default async function Destination({ params }: { params: { destinationId:
               options={{
                 tags: ['traveler-photo', `destination-${destination.id}`],
                 folder: 'my-travel-ai/uploads',
+                detection: 'captioning',
+                on_success: 'current_asset.update({ context: {caption: e.upload_info?.info?.detection?.captioning?.data?.caption} })'
               }}
               uploadPreset="jm4libzz"
             >
@@ -131,7 +133,7 @@ export default async function Destination({ params }: { params: { destinationId:
                       width={526}
                       height={526}
                       crop="fill"
-                      alt=""
+                      alt={photo.context?.caption || ''}
                     />
                   </li>
                 )
