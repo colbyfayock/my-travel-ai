@@ -1,6 +1,6 @@
 # Travel Website Enhanced with AI
 
-🚀 Demo: https://my-travel-ai-ten.vercel.app/
+🚀 Demo: https://my-travel-ai-psi.vercel.app/
 
 ## More tutorials and walkthroughs
 
