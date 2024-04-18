@@ -119,7 +119,7 @@ export default async function Destination({ params }: { params: { destinationId:
                 detection: 'captioning',
                 on_success: 'current_asset.update({ context: {caption: e.upload_info?.info?.detection?.captioning?.data?.caption} })'
               }}
-              uploadPreset="jm4libzz"
+              uploadPreset="my-travel-ai"
             >
               Add a Photo
             </CldUploadButton>
